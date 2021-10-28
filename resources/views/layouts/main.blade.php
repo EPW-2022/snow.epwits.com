@@ -37,32 +37,29 @@
         <div class="collapse navbar-collapse flex-md-grow-0" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item text-center">
-              <a class="nav-link my-3" href="/">Main Website</a>
+              <a class="nav-link my-3" href="/">Dashboard</a>
             </li>
             <li class="nav-item text-center">
-              <a class="nav-link my-3" href="/register">Registrasi</a>
+              <a class="nav-link my-3" href="/register">sign up</a>
             </li>
             @auth
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   Halooo, {{ auth()->user()->username }}
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <form action="/logout" method="post" class="dropdown-item">
-                      @csrf
-                      <button type="submit" class="dropdown-item">Logout</button>
-                      <li></li>
-                    </form>
-                    
-                  </ul>
-                  </li>   
-             @else
-                <li class="nav-item">
-                    <a href="/login" class="nav-link">Login</a>
-                </li> 
-             @endauth
+              <li class="nav-item text-center">
+                <form action="/logout" method="POST">
+                  @csrf
+                  <button type="submit" class="nav-link border-0 bg-transparent my-3">Logout</button>
+                </form>
+              </li>
+            @else
+              @if (Request::is('login'))
+                <li class="nav-item text-center">
+                  <a class="nav-link my-3" href="/register">Daftar</a>
+                </li>
+              @else
+                <li class="nav-item text-center">
+                  <a class="nav-link my-3" href="/login">Login</a>
+                </li>
+              @endif
+            @endauth
           </ul>
         </div>
       </div>
