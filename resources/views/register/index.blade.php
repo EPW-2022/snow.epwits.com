@@ -12,7 +12,7 @@
               @csrf
             <div class="row mb-3">
               <div class="col-md-12 d-flex">
-                <b>1. Akun Tim</b><span class="line flex-grow-1"></span>
+                <b>1. Akun Tim lol</b><span class="line flex-grow-1"></span>
               </div>
             </div>                      
             <div class="row">
