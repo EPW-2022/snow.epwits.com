@@ -1,0 +1,146 @@
+.body {
+    background-color: $primary-snow;
+
+}
+
+.content {
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+.agreement {
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-bottom: 5rem;
+}
+
+.agreement button {
+    background-color: $darker-blue;
+    color: $primary-event;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    font-weight: bolder;
+}
+
+.agreement label {
+    color: $darker-blue;
+}
+
+//Container Upload
+
+.upload {
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+
+
+.upload input {
+    background: $primary-event;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-color: $primary-event;
+    border: none;
+}
+
+.upload input:focus {
+    background: $primary-event;
+}
+
+.upload label {
+    color: $darker-blue;
+}
+
+.upload b {
+    color: $darker-blue;
+}
+
+
+.upload .plus {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    float: right;
+    margin-top: -38px;
+    margin-right: 19px;
+}
+
+
+//
+
+.container {
+    display: block;
+}
+
+.line {
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+.gambar img {
+    margin-top: 7rem;
+    margin-bottom: 6rem;
+}
+
+.container .content {
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+//ubah seluruh input content
+.content input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: $primary-event;
+    border-color: $primary-event;
+}
+
+.content input:focus {
+    background: $primary-event;
+}
+
+// 
+
+
+.content label {
+    color: $darker-blue;
+}
+
+.content b {
+    color: $darker-blue;
+}
+
+.line {
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+.custom-file-input {
+    color: transparent;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    color: #65659B;
+    display: inline-block;
+    background: $primary-event;
+    border-radius: 3px;
+    width: 100%;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.custom-file-input:hover::before {
+    border-color: black;
+}
+
+.custom-file-input:active {
+    outline: 0;
+}
+
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
