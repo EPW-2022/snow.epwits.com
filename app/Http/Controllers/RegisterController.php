@@ -22,6 +22,7 @@ class RegisterController extends Controller
         $validatedData=$request->validate([
             "namatim"=>'required',
             "username"=>'required|min:6',
+            "email"=>'required|email:dns',
             "password"=>'min:6|required_with:conpassword|same:conpassword',
             "conpassword"=>'min:6'
         ]);
@@ -111,28 +112,39 @@ class RegisterController extends Controller
         ]);
 
        //Ini harusnya gk wajib, aku bingung menambahkan logika if disini
+        
 
-        $foto2 = $request->file('foto2');
-        $nama_file6 = $foto2->getClientOriginalName();
-        $tujuan_upload6 = 'foto_anggota2';
-        $foto2->move($tujuan_upload6,$foto2->getClientOriginalName());
+        if ($validatedDataEmpat["namaanggota2"]=='') {
+            Member2::create($validatedDataEmpat);
+            return redirect('/login')->with('success', 'Regismu berhasil, akunmu sudah aktif');
+        } else {
+            # code...
+            $foto2 = $request->file('foto2');
+            $nama_file6 = $foto2->getClientOriginalName();
+            $tujuan_upload6 = 'foto_anggota2';
+            $foto2->move($tujuan_upload6,$foto2->getClientOriginalName());
+    
+            $kartupel2 = $request->file('kartupel2');
+            $nama_file7 = $kartupel2->getClientOriginalName();
+            $tujuan_upload7 = 'kartupel_anggota2';
+            $kartupel2->move($tujuan_upload7,$kartupel2->getClientOriginalName());
+    
+            $twibbon2 = $request->file('twibbon2');
+            $nama_file8 = $twibbon2->getClientOriginalName();
+            $tujuan_upload8 = 'twibbon_anggota2';
+            $twibbon2->move($tujuan_upload8,$twibbon2->getClientOriginalName());
+    
+            $validatedDataEmpat['user_id']=$user->id;
+            $validatedDataEmpat['foto2']=$nama_file6;
+            $validatedDataEmpat['kartupel2']=$nama_file7;
+            $validatedDataEmpat['twibbon2']=$nama_file8;
+    
+            Member2::create($validatedDataEmpat);
+            return redirect('/login')->with('success', 'Regismu berhasil, akunmu sudah aktif');
+        }
+        
 
-        $kartupel2 = $request->file('kartupel2');
-        $nama_file7 = $kartupel2->getClientOriginalName();
-        $tujuan_upload7 = 'kartupel_anggota2';
-        $kartupel2->move($tujuan_upload7,$kartupel2->getClientOriginalName());
-
-        $twibbon2 = $request->file('twibbon2');
-        $nama_file8 = $twibbon2->getClientOriginalName();
-        $tujuan_upload8 = 'twibbon_anggota2';
-        $twibbon2->move($tujuan_upload8,$twibbon2->getClientOriginalName());
-
-        $validatedDataEmpat['user_id']=$user->id;
-        $validatedDataEmpat['foto2']=$nama_file6;
-        $validatedDataEmpat['kartupel2']=$nama_file7;
-        $validatedDataEmpat['twibbon2']=$nama_file8;
-
-        Member2::create($validatedDataEmpat);
-        return redirect('/login')->with('success', 'Regismu berhasil, akunmu sudah aktif');
     }
 }
+
+

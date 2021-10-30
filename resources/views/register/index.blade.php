@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+
     <section class="body">
       <div class="container-fluid">
         <div class="gambar jumbotron text-center">
@@ -106,6 +107,18 @@
                 <div class="mb-3">
                   <label for="tanggallahir" class="form-label">Tanggal Lahir</label>
                   <input type="date" class="form-control" name="tanggallahir" id="tanggallahir" placeholder="tanggallahir" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Alamat Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Alamat Email" required value={{ old('email') }}>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
                 </div>
               </div>
             </div>

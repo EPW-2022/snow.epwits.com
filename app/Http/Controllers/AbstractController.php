@@ -12,6 +12,8 @@ class AbstractController extends Controller
             "file"=>'required|mimes:jpeg,png,jpg|max:2048'
         ]);
 
+        
+
         $file = $request->file('file');
         $nama_file = $file->getClientOriginalName();
         $tujuan_upload = 'abstrak';
