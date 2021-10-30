@@ -145,7 +145,7 @@
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="tempatlahir1" class="form-label">Tempat Lahir</label>
-                  <input type="text" class="form-control" name="tempatlahir1" id="tempatlahir1" placeholder="tempatlahir1" required value={{ old('tempatlahir1') }}>
+                  <input type="text" class="form-control" name="tempatlahir1" id="tempatlahir1" placeholder="Tempat Lahir" required value={{ old('tempatlahir1') }}>
                 </div>
               </div>
             </div>
