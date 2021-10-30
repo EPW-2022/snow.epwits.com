@@ -22,12 +22,12 @@ class RegisterController extends Controller
         $validatedData=$request->validate([
             "namatim"=>'required',
             "username"=>'required|min:6',
-            "email"=>'required|email:dns',
             "password"=>'min:6|required_with:conpassword|same:conpassword',
             "conpassword"=>'min:6'
         ]);
         $validatedData['password']=bcrypt($validatedData['password']);
         $user= User::create($validatedData);
+        
 
         //tabel leader
         $validatedDataDua=$request->validate([
@@ -99,7 +99,7 @@ class RegisterController extends Controller
 
 
         ModelsMember::create($validatedDataTiga);
-
+        
         $validatedDataEmpat=$request->validate([
             "namaanggota2"=>'',
             "nisn2"=>'',
@@ -133,7 +133,6 @@ class RegisterController extends Controller
         $validatedDataEmpat['twibbon2']=$nama_file8;
 
         Member2::create($validatedDataEmpat);
-        
         return redirect('/login')->with('success', 'Regismu berhasil, akunmu sudah aktif');
     }
 }

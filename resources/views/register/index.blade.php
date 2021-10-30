@@ -6,10 +6,10 @@
         <div class="gambar jumbotron text-center">
           <img src="/img/regis-snow.png" alt="regis snow">
         </div>
+        <form action="/register" method="post" enctype="multipart/form-data">
+          @csrf
         <div class="container content">
             <!--Akun Tim-->
-            <form action="/register" method="post" enctype="multipart/form-data">
-              @csrf
             <div class="row mb-3">
               <div class="col-md-12 d-flex">
                 <b>1. Akun Tim</b><span class="line flex-grow-1"></span>
@@ -19,7 +19,7 @@
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="namatim" class="form-label">Nama Tim*</label>
-                  <input type="text" class="form-control @error('namatim') is-invalid @enderror" name="namatim" id="namatim" placeholder="Nama Tim" required value={{ old('name') }}>
+                  <input type="text" class="form-control @error('namatim') is-invalid @enderror" name="namatim" id="namatim" placeholder="Nama Tim" required value={{ old('namatim') }}>
                 </div>
               </div>
               <div class="col-md-6">
@@ -38,7 +38,7 @@
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
-                  <label for="confirmpassword*" class="form-label">Confirm Password*</label>
+                  <label for="conpassword" class="form-label">Confirm Password*</label>
                   <input type="password" class="form-control @error('conpassword') is-invalid @enderror"name="conpassword" id="conpassword" placeholder="Confirm Password" required>
                 </div>
               </div>
@@ -59,7 +59,7 @@
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
-                    <label for="kota*" class="form-label">Kota*</label>
+                    <label for="kota" class="form-label">Kota*</label>
                     <input type="text" class="form-control" name="kota" id="kota" placeholder="Kota" required value={{ old('kota') }}>
                 </div>
               </div>
@@ -70,13 +70,13 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="mb-3">
-                  <label for="nama-ketua" class="form-label">Nama Ketua*</label>
+                  <label for="namaketua" class="form-label">Nama Ketua*</label>
                   <input type="text" class="form-control" name="namaketua" id="namaketua" placeholder="Nama Ketua" required value={{ old('namaketua') }}>
                 </div>
               </div>
                 <div class="col-md-6">
                   <div class="mb-3">
-                    <label for="nisn-ketua" class="form-label">NISN/NIM</label>
+                    <label for="nisn" class="form-label">NISN/NIM</label>
                     <input type="text" class="form-control" name="nisn" id="nisn" placeholder="NISN/NIM" required value={{ old('nisn') }}>
                   </div>
               </div>
@@ -98,8 +98,8 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="mb-3">
-                  <label for="nomor-hp" class="form-label">No. Handphone</label>
-                  <input type="text" class="form-control" id="nomor-hp" placeholder="No. Handphone">
+                  <label for="nomorhp" class="form-label">No. Handphone</label>
+                  <input type="text" class="form-control" name="nomorhp" id="nomorhp" placeholder="No. Handphone" required value={{ old('nomorhp') }}>
                 </div>
               </div>
               <div class="col-md-6">
@@ -116,7 +116,7 @@
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="namaanggota1" class="form-label">Nama Anggota 1*</label>
-                  <input type="text" class="form-control" name="Nama Anggota 1" id="namaanggota1" placeholder="Nama Anggota 1" required value={{ old('namaanggota1') }}>
+                  <input type="text" class="form-control" name="namaanggota1" id="namaanggota1" placeholder="Nama Anggota 1" required value={{ old('namaanggota1') }}>
                 </div>
               </div>
               <div class="col-md-6">
@@ -255,10 +255,10 @@
           </div>
           <div class="row mb-4">
             <div class="col-md-6 mt-3">
-                <label>Format : .jpg, max. Size: 5 Mb</label> 
+                <label>Format : .jpg, max. Size: 2 Mb</label> 
             </div>
             <div class="col-md-6 mt-3">
-                <label>Format : .jpg, max. Size: 5 Mb</label> 
+                <label>Format : .jpg, max. Size: 2 Mb</label> 
             </div>
           </div>
           <!--Upload Twibbon-->
@@ -291,7 +291,7 @@
             <!--Twibbon Anggota 2-->
             <div class="col-md-6 mt-3">
                 <label for="twibbon2" class="form-label">Anggota 2</label>
-                <input type="file" class="form-control @error('twibbon1') is-invalid @enderror " name="twibbon1" id="twibbon2" placeholder="twibbon2">
+                <input type="file" class="form-control @error('twibbon1') is-invalid @enderror " name="twibbon2" id="twibbon2" placeholder="twibbon2">
                 
             </div>
               <div class="col-md-6 mt-3">
@@ -315,7 +315,7 @@
         <!--Submit-->
           <div class="row d-flex justify-content-center">
             <div class="col-md-6 d-flex justify-content-center">
-                <button type="button" class="btn">
+                <button type="submit" class="btn">
                   <b>Daftar</b> 
                 </button>
             </div>
