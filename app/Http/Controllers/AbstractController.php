@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class AbstractController extends Controller
 {
     public function store(Request $request){
+        
         $validatedData=$request->validate([
             "file"=>'required|mimes:jpeg,png,jpg|max:2048'
         ]);
@@ -18,6 +19,8 @@ class AbstractController extends Controller
         $nama_file = $file->getClientOriginalName();
         $tujuan_upload = 'abstrak';
         $file->move($tujuan_upload,$file->getClientOriginalName());
+
+        
 
         Abstrak::create([
 			'filename' => $nama_file

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Leader;
 use App\Model\Member;
+use App\Models\Abstrak;
 use App\Models\Member as ModelsMember;
 use App\Models\Member2;
 
@@ -29,7 +30,7 @@ class RegisterController extends Controller
         $validatedData['password']=bcrypt($validatedData['password']);
         $user= User::create($validatedData);
         
-
+        
         //tabel leader
         $validatedDataDua=$request->validate([
             "asalsekolah"=>'required',
