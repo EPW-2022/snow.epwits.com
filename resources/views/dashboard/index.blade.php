@@ -5,13 +5,21 @@
     </div>
     <div class="container badan">
         <div class="Team-name">
-            <p>Nama Tim</p>
+            <p>{{ $namatim }}</p>
         </div>
         <div class="Team-from">
-            <p>Asal Tim</p>
+            <p>{{ $asal }}</p>
         </div>
         <div class="Team-No">
-            <p>Tim No</p>
+            <p>  @if ($number<10)
+                00{{ $number }}
+            @else
+                @if ($number < 100)
+                    0{{ $number }}
+                @else
+                    {{ $number }}
+                @endif
+            @endif   </p>
         </div>
         <a class="d-grid btn btn-primary gap-3 col-3 mx-auto kartu" href="https://nekocalc.com/px-to-rem-converter" target="blank"  role="button">Lihat Kartu Peserta</a> 
         <div class="container abstrak-sub mx-auto">
@@ -28,7 +36,7 @@
                   <input type="file" class="form-control custom-file-input @error('filename') is-invalid @enderror" id="input file" name="file" required>
                 </div>
                 </div>
-                <a href="http://www.google.com" class="kunci">Kunci Abstrak</a>
+                <a href="/kunciabs" class="kunci">Kunci Abstrak</a>
                 <div class="mb-3 submit-btn">
                   <button class="btn btn-primary" type="submit">Submit</button>
                 </div>

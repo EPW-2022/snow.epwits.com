@@ -23,12 +23,18 @@ class LoginController extends Controller
         $syarat=$user->id;
         $leader=Leader::where('user_id', $syarat)->first();
         $syarat2=$leader->is_verified;
-        
+
+        $namateam=$user->namatim;
+        $asalsekolah=$leader->asalsekolah;
+
 
         if(Auth::attempt($credentials)){
             if ($syarat2=="1"  ) {
-                $request->session()->regenerate();
-                return redirect()->intended('/dashboard');
+                return view('dashboard.index', [
+                    "namatim"=>$namateam,
+                    "asal"=>$asalsekolah,
+                    "number"=>$syarat
+                ]);
             } else {
                 $request->session()->regenerate();
                 return redirect()->intended('/verifakun');
