@@ -19,7 +19,7 @@ use App\Http\Controllers\AbstractController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('login.index');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');

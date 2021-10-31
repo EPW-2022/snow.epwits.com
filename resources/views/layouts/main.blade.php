@@ -36,13 +36,10 @@
         </button>
         <div class="collapse navbar-collapse flex-md-grow-0" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            @auth
             <li class="nav-item text-center">
               <a class="nav-link my-3" href="/">Dashboard</a>
             </li>
-            <li class="nav-item text-center">
-              <a class="nav-link my-3" href="/register">sign up</a>
-            </li>
-            @auth
               <li class="nav-item text-center">
                 <form action="/logout" method="POST">
                   @csrf
@@ -50,15 +47,15 @@
                 </form>
               </li>
             @else
-              @if (Request::is('login'))
                 <li class="nav-item text-center">
                   <a class="nav-link my-3" href="/register">Daftar</a>
                 </li>
-              @else
+                <li class="nav-item text-center">
+                  <a class="nav-link my-3" href="/register">Sign up</a>
+                </li>
                 <li class="nav-item text-center">
                   <a class="nav-link my-3" href="/login">Login</a>
                 </li>
-              @endif
             @endauth
           </ul>
         </div>
