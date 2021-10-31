@@ -31,7 +31,7 @@ class AbstractController extends Controller
     }
 
     public function lock(){
-        return ('poruska');
+        return ('ping');
     }
     
 }
