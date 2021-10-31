@@ -30,7 +30,7 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', function(){
-    return view('dashboard.indexbaru');
+    return view('dashboard.index');
 })->middleware('auth');
 
 Route::post('/submitabs', [AbstractController::class, 'store']);
