@@ -27,7 +27,7 @@ class AbstractController extends Controller
 		]);
 
         //if ketika locked false, masih 
-        return('amazing');
+        return('/dashboard');
     }
 
     public function lock(){

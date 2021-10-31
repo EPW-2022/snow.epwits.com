@@ -28,10 +28,7 @@
                   <input type="file" class="form-control custom-file-input @error('filename') is-invalid @enderror" id="input file" name="file" required>
                 </div>
                 </div>
-                <form action="/kunciabs" method="POST">
-                  @csrf
-                  <button type="submit" class="nav-link border-0 bg-transparent my-3">Kunci Abstrak</button>
-                </form>
+                <a href="http://www.google.com" class="kunci">Kunci Abstrak</a>
                 <div class="mb-3 submit-btn">
                   <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
