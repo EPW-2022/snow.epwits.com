@@ -118,7 +118,7 @@ class RegisterController extends Controller
             Member2::create($validatedDataEmpat);
             return redirect('/login')->with('success', 'Regismu berhasil, akunmu sudah aktif');
         } else {
-            # code...
+            
             $foto2 = $request->file('foto2');
             $nama_file6 = $foto2->getClientOriginalName();
             $tujuan_upload6 = 'foto_anggota2';

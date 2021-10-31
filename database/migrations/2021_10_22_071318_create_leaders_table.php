@@ -27,6 +27,7 @@ class CreateLeadersTable extends Migration
             $table->string('foto')->nullable();
             $table->string('kartupel')->nullable();
             $table->string('twibbon')->nullable();
+            $table->boolean('is_verified')->default(false);
             $table->timestamps();
         });
     }

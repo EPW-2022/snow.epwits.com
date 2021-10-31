@@ -26,5 +26,9 @@ class AbstractController extends Controller
         //if ketika locked false, masih 
         return('amazing');
     }
+
+    public function lock(){
+        return ('poruska');
+    }
     
 }

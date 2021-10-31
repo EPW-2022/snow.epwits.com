@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use App\Models\Leader;
 
 class LoginController extends Controller
 {
@@ -17,9 +19,22 @@ class LoginController extends Controller
             "password"=>'required'
         ]);
         
+        $user=User::where('username', $request->username)->first();
+        $syarat=$user->id;
+        $leader=Leader::where('user_id', $syarat)->first();
+        $syarat2=$leader->is_verified;
+        
+
         if(Auth::attempt($credentials)){
-            $request->session()->regenerate();
-            return redirect()->intended('/dashboard');
+            if ($syarat2=="1"  ) {
+                $request->session()->regenerate();
+                return redirect()->intended('/dashboard');
+            } else {
+                $request->session()->regenerate();
+                return redirect()->intended('/verifakun');
+            }
+            
+            
         }
 
         return back()->with('loginerror', 'loginfailed');

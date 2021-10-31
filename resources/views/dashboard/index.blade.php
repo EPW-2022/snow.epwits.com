@@ -7,4 +7,8 @@
         <label for="file">Abstract</label>
         <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
      </form>
+     <form action="/kunciabs" method="POST">
+        @csrf
+        <button type="submit" class="nav-link border-0 bg-transparent my-3">Kunci Abstrak</button>
+      </form>
 @endsection
