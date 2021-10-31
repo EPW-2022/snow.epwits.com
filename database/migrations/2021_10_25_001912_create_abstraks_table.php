@@ -17,7 +17,7 @@ class CreateAbstraksTable extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable();
             // $table->string('judulabs');
-            $table->string('filename');
+            $table->string('filename')->nullable();
             $table->boolean('is_locked')->default(false);
             $table->timestamps();
         });

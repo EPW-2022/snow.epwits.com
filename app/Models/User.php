@@ -31,6 +31,10 @@ class User extends Authenticatable
         return $this->hasOne(Member2::class);
     }
 
+    public function abstrak(){
+        return $this->hasOne(Abstrak::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

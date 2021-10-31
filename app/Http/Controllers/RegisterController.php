@@ -112,6 +112,10 @@ class RegisterController extends Controller
             "twibbon2"=>'mimes:jpeg,png,jpg|max:2048'
         ]);
 
+        Abstrak::create([
+            'user_id'=>$user->id,
+            'is_locked'=>false
+        ]);
        //Ini harusnya gk wajib, aku bingung menambahkan logika if disini
         
 
