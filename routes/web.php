@@ -30,13 +30,13 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', function(){
-    return view('dashboard.index');
+    return view('dashboard.indexbaru');
 })->middleware('auth');
 
 Route::post('/submitabs', [AbstractController::class, 'store']);
 
 Route::get('/verifakun', function(){
-    return view('login.verif');
-})->middleware('auth');
+    return view('login.verifbaru');
+})->middleware('auth') ; 
 
 Route::post('/kunciabs', [AbstractController::class, 'lock']);

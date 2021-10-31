@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+body{
+
+.badan{
+    background: #DD949B;
+    width: 100vw;
+    margin-top: -5rem;
+    z-index: 1000;
+    border-radius: 2rem;
+    margin-bottom: 8rem;
+    padding-bottom: 7rem;
+    @media (min-width: 321px) and (max-width: 450px){
+        
+    }
+    .Team-name{
+        p{
+            font-family: Zilla Slab;
+            font-style: normal;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 6rem;
+            color: #A32C38;
+            
+        }
+    }
+    .Team-from{
+        margin-top: 2rem;
+        p{
+            font-family: Zilla Slab;
+            font-style: normal;
+            font-size: 1.5rem;     
+            margin-top: -1.2rem;
+            text-align: center;
+            color: #424A63;
+        }
+    }
+    .Team-No{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        p{
+            font-family: Zilla Slab;
+            font-style: normal;
+            font-size: 1.5rem;     
+            margin-top: -1.2rem;
+            text-align: center;
+            color: #424A63;
+        }
+    }
+    a{
+        margin-bottom: 5rem;
+        font-family: Zilla Slab;
+        background-color:  #424A63;
+    }
+    .abstrak-sub{
+        margin-top: 2rem;
+        margin-left: auto;
+        width: 60vw;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 0.5rem;
+        background: #424A63;
+        .abs-text{
+           p{
+            position: relative;
+            font-family: Zilla Slab;
+            color:  #FDE7B6;
+            font-size: 1.75rem;
+            padding-top: 25%;
+            padding-bottom: auto;
+            text-align: center;
+           }
+        }
+    }
+
+}
+.formside{
+
+    .bb{
+        padding-top: 20%;
+        margin-bottom: 4rem;
+        @media (min-width: 321px) and (max-width: 450px){
+            padding-top: 10%;
+            margin-bottom: 4rem; 
+        }
+        .form{
+            padding-right: 2rem;
+            padding-left: 4rem;
+            @media (min-width: 321px) and (max-width: 450px){
+                padding-right: 1rem;
+            padding-left: 1rem;
+            }
+        .custom-file-input{
+            
+            @media (min-width: 321px) and (max-width: 450px){
+            color: transparent;
+            }
+        }
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+        .custom-file-input::before {
+            color: #A32C38;
+            content: "Masukkan file";
+            padding-left: 2rem;
+            @media (min-width: 321px) and (max-width: 450px){
+                content: "Masukkan file"; 
+            }
+        } 
+        .custom-file-input:active {
+            outline: 0;
+        } 
+        padding-top: 2rem;
+        img{
+            margin-top: 1rem;
+            margin-left: 45%;
+            margin-right: auto;
+        }
+    }
+}
+
+}
+    a{
+        padding-top: 1rem;
+        color:#FFFFFF;
+        padding-left: 5rem;
+        font-family: Zilla slab;
+        font-size: 1.3rem;
+        @media (min-width: 321px) and (max-width: 450px){
+            padding-left: 3rem;
+            font-size: 1.1rem;
+        }
+    }
+    .kunci{
+        padding-left: 1rem;
+        color:#FFFFFF;
+        @media (min-width: 321px) and (max-width: 450px){
+            font-size: 1rem;
+        }
+    }
+    .submit-btn{
+        margin-top: -2.5rem;
+        padding-left: 75%;
+        @media (min-width: 321px) and (max-width: 450px){
+            margin-top: 2rem;
+        padding-left: 30%;
+        }
+        button{
+            border-radius: 0.5rem;
+            background-color: #FDE7B6;
+            font-family: Zilla Slab;
+            color: #75282C;
+        }
+    }
+
+
+}
+

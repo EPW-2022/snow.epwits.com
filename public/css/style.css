@@ -6,6 +6,12 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zilla+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -300,6 +306,105 @@ nav.navbar .navbar-nav .dropdown .dropdown-menu a.dropdown-item {
 }
 
 #loginForm {
+  background: linear-gradient(120deg, #dd949b 0, #dd949b 50%, #fde7b6 41%, #fde7b6 50.6%, #65659b 46.666%, #65659b 100%);
+}
+
+#loginForm .container {
+  min-height: calc(100vh - 85px);
+}
+
+#loginForm .container .login-logo {
+  width: 300px;
+  max-width: 100%;
+}
+
+#loginForm .container .login-epw-2022 {
+  width: 350px;
+  max-width: 100%;
+}
+
+#loginForm .container .login-form {
+  width: 320px;
+  max-width: 100%;
+}
+
+#loginForm .container .login-form .form-label {
+  font-family: "Zilla Slab", serif;
+  color: #f2f2f2;
+}
+
+#loginForm .container .login-form .login-button {
+  background-color: #424a63;
+  color: #f2f2f2;
+  font-family: "Zilla Slab", serif;
+  font-weight: bold;
+}
+
+#loginForm .container .login-form .login-register {
+  font-family: "Zilla Slab", serif;
+  color: #f2f2f2;
+  letter-spacing: 1px;
+}
+
+#loginForm .container .login-form .login-register a {
+  color: inherit;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  #loginForm {
+    background: linear-gradient(185deg, #dd949b 0, #dd949b 50%, #fde7b6 41%, #fde7b6 50.6%, #65659b 46.666%, #65659b 100%);
+  }
+  #loginForm img {
+    width: 30%;
+  }
+}
+
+body {
+  background: #DD949B;
+}
+
+body .verif {
+  background: #DD949B;
+  padding-bottom: 5rem;
+}
+
+body .verif img {
+  width: 20%;
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body .verif img {
+    width: 40%;
+  }
+}
+
+body .verif .text {
+  font-family: "Abril Fatface", cursive;
+  font-style: normal;
+  text-align: center;
+  color: #424A63;
+  padding-top: 4rem;
+}
+
+body .verif .text p {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body .verif .text {
+    padding-top: 2rem;
+  }
+  body .verif .text p {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1rem;
+  }
+}
+
+#loginForm {
   background: linear-gradient(120deg, #c5d8ab 48%, #e56848 48%);
 }
 
@@ -349,6 +454,181 @@ nav.navbar .navbar-nav .dropdown .dropdown-menu a.dropdown-item {
   #loginForm {
     background: linear-gradient(185deg, #c5d8ab 65%, #e56848 65%);
   }
+}
+
+body .badan {
+  background: #DD949B;
+  width: 100vw;
+  margin-top: -5rem;
+  z-index: 1000;
+  border-radius: 2rem;
+  margin-bottom: 8rem;
+  padding-bottom: 7rem;
+}
+
+body .badan .Team-name p {
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 6rem;
+  color: #A32C38;
+}
+
+body .badan .Team-from {
+  margin-top: 2rem;
+}
+
+body .badan .Team-from p {
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-top: -1.2rem;
+  text-align: center;
+  color: #424A63;
+}
+
+body .badan .Team-No {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+body .badan .Team-No p {
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-top: -1.2rem;
+  text-align: center;
+  color: #424A63;
+}
+
+body .badan a {
+  margin-bottom: 5rem;
+  font-family: Zilla Slab;
+  background-color: #424A63;
+}
+
+body .badan .abstrak-sub {
+  margin-top: 2rem;
+  margin-left: auto;
+  width: 60vw;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 0.5rem;
+  background: #424A63;
+}
+
+body .badan .abstrak-sub .abs-text p {
+  position: relative;
+  font-family: Zilla Slab;
+  color: #FDE7B6;
+  font-size: 1.75rem;
+  padding-top: 25%;
+  padding-bottom: auto;
+  text-align: center;
+}
+
+body .formside .bb {
+  padding-top: 20%;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body .formside .bb {
+    padding-top: 10%;
+    margin-bottom: 4rem;
+  }
+}
+
+body .formside .bb .form {
+  padding-right: 2rem;
+  padding-left: 4rem;
+  padding-top: 2rem;
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body .formside .bb .form {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body .formside .bb .form .custom-file-input {
+    color: transparent;
+  }
+}
+
+body .formside .bb .form .custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+body .formside .bb .form .custom-file-input::before {
+  color: #A32C38;
+  content: "Masukkan file";
+  padding-left: 2rem;
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body .formside .bb .form .custom-file-input::before {
+    content: "Masukkan file";
+  }
+}
+
+body .formside .bb .form .custom-file-input:active {
+  outline: 0;
+}
+
+body .formside .bb .form img {
+  margin-top: 1rem;
+  margin-left: 45%;
+  margin-right: auto;
+}
+
+body a {
+  padding-top: 1rem;
+  color: #FFFFFF;
+  padding-left: 5rem;
+  font-family: Zilla slab;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body a {
+    padding-left: 3rem;
+    font-size: 1.1rem;
+  }
+}
+
+body .kunci {
+  padding-left: 1rem;
+  color: #FFFFFF;
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body .kunci {
+    font-size: 1rem;
+  }
+}
+
+body .submit-btn {
+  margin-top: -2.5rem;
+  padding-left: 75%;
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  body .submit-btn {
+    margin-top: 2rem;
+    padding-left: 30%;
+  }
+}
+
+body .submit-btn button {
+  border-radius: 0.5rem;
+  background-color: #FDE7B6;
+  font-family: Zilla Slab;
+  color: #75282C;
 }
 
 .body {

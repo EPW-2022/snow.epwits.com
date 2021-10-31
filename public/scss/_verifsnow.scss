@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zilla+Slab&display=swap');
+body{
+    background: #DD949B;
+    .verif{
+        background: #DD949B;
+        padding-bottom: 5rem;
+        img{
+            width: 20%;
+            @media (min-width: 321px) and (max-width: 450px) {
+                width: 40%;
+            }
+        }
+        .text{
+            font-family: $font-abril;
+            font-style: normal;
+            p{
+                font-size: 2rem;
+            line-height: 3rem;
+            font-weight: bold;
+            }
+            text-align: center;
+            color: #424A63;
+            padding-top: 4rem;
+            @media (min-width: 321px) and (max-width: 450px) {
+            padding-top: 2rem;
+            p{
+            padding-top: 1rem;
+            font-size: 1.2rem;
+            line-height: 1rem;
+            }
+            }
+
+        }
+    }
+}
