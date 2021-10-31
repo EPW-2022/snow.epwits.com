@@ -1,5 +1,10 @@
 @extends('layouts.main')
-
 @section('content')
-    <h2>Akun anda masih diferifikasi</h2>
+<div class="text-center verif">
+        <img src="\img\logosnow.png" class="rounded mt-5" alt="...">
+        <div class="text">
+        <p>Data anda telah disimpan dan sedang menunggu verifikasi </p>
+         <p>  Terima kasih telah mendaftar SNOW EPW 2022 </p> 
+        </div>
+      </div>
 @endsection

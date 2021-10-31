@@ -1,9 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-
-<div class="row justify-content-center">
-    <div class="col-md-5">
+<section id="loginForm">
+        <div class="container d-flex justify-content-center flex-column py-5">
         @if (session()->has('success'))
             <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
                 {{ session('success') }}
@@ -17,26 +16,27 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-
-        <main class="form-signin mt-3">
-            <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
-            <form action="/login" method="post">
+          <div class="row align-items-center">
+            <div class="col-md-4 px-6">
+              <img src="/img/logosnow.png" class="login-logo d-block mx-auto" alt="">
+              <img src="/svg/logosnow.svg" class="login-epw-2022 d-block mx-auto" alt="">
+            </div>
+            <div class="col-md-7 px-6"> 
+              <form action="/login" method="POST" class="login-form mx-auto me-2 px-4 mt-5 mt-md-0">
                 @csrf
-                <div class="form-floating">
-                <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" id="username" placeholder="username" required>
-                <label for="username">Username</label>
+                <div class="mb-4">
+                  <label for="username" class="form-label">Username</label>
+                  <input class="form-control @error('username') is-invalid @enderror" type="text" id="username" name="username" placeholder="Username" autofocus tabindex="1" autocomplete="on" required>
                 </div>
-                <div class="form-floating">
-                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="Password" required>
-                <label for="password">Password</label>
+                <div class="mb-4">
+                  <label for="password" class="form-label">Password</label>
+                  <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="Password" tabindex="2" required>
                 </div>
-                <div class="checkbox mb-3">
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
-            </form>
-            <small>Not registered? <a href="/register">Register here</a></small>
-        </main>
-    </div>
-</div>
-
+                <button type="submit" class="btn login-button w-100" tabindex="3">Log In</button>
+                <p class="login-register text-center mt-3" tabindex="4">Belum mendaftar? <a href="/daftar">Daftar sekarang!</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 @endsection

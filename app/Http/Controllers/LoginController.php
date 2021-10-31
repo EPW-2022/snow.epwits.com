@@ -10,7 +10,7 @@ use App\Models\Leader;
 class LoginController extends Controller
 {
     public function index(){
-        return view('login.indexbaru');
+        return view('login.index');
     }
 
     public function authenticate(Request $request){
