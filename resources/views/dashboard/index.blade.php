@@ -28,7 +28,6 @@
                   <input type="file" class="form-control custom-file-input @error('filename') is-invalid @enderror" id="input file" name="file" required>
                 </div>
                 </div>
-                <a href="http://www.google.com">Edit</a>
                 <a href="http://www.google.com" class="kunci">Kunci Abstrak</a>
                 <div class="mb-3 submit-btn">
                   <button class="btn btn-primary" type="submit">Submit</button>
