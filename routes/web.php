@@ -36,7 +36,7 @@ Route::get('/dashboard', function(){
 Route::post('/submitabs', [AbstractController::class, 'store']);
 
 Route::get('/verifakun', function(){
-    return view('login.verifbaru');
+    return view('login.verif');
 })->middleware('auth') ; 
 
 Route::post('/kunciabs', [AbstractController::class, 'lock']);
