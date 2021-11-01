@@ -47,25 +47,12 @@
                     <button class="btn btn-primary" type="submit">Submit</button>
                   </div>
                 </form>
-                <form action="/kunciabs" method="POST">
-                  @csrf
-                  <div class="mb-3 submit-btn">
-                  <button class="btn btn-primary" type="submit"> Kunci abstrak </button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
-                @if (auth()->user()->abstrak->filename)
+                
                     
-                        @if (auth()->user()->abstrak->is_locked == "1")
-                        
-                        @else
-                        
-                        @endif
-                @else
-                    
-                @endif
+                
                 
     </div>
  @endsection
