@@ -32,7 +32,8 @@
           <div class="rainbow"></div>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fas fa-bars fa-lg fa-fw"></span>
+          <img src="/svg/toggler.svg" alt="">
+        <span class="fas fa-bars fa-lg fa-fw"></span>
         </button>
         <div class="collapse navbar-collapse flex-md-grow-0" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
