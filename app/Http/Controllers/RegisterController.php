@@ -121,7 +121,7 @@ class RegisterController extends Controller
 
         if ($validatedDataEmpat["namaanggota2"]=='') {
             Member2::create($validatedDataEmpat);
-            return redirect('/login')->with('success', 'Regismu berhasil, akunmu sudah aktif');
+            return redirect('/login')->with('success', 'Registrasi berhasil, akunmu sudah aktif');
         } else {
             
             $foto2 = $request->file('foto2');
@@ -145,7 +145,7 @@ class RegisterController extends Controller
             $validatedDataEmpat['twibbon2']=$nama_file8;
     
             Member2::create($validatedDataEmpat);
-            return redirect('/login')->with('success', 'Regismu berhasil, akunmu sudah aktif');
+            return redirect('/login')->with('success', 'Registrasi berhasil, akunmu sudah aktif');
         }
         
 

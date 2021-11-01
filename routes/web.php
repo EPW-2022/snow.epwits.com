@@ -18,9 +18,7 @@ use App\Http\Controllers\AbstractController;
 |
 */
 
-Route::get('/', function () {
-    return view('login.index');
-});
+Route::get('/', [LoginController::class, 'cek']);
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);

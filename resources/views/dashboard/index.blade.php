@@ -25,6 +25,16 @@
         
         <div class="container abstrak-sub mx-auto">
             <div class="row">
+
+              @if (session()->has('abstrak'))
+              <div class="container">
+                <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                  {{ session('abstrak') }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              </div>
+              @endif
+
               <div class="col abs-text">
                 <p>ABSTRAK</p>
                 
@@ -43,9 +53,11 @@
                   <input type="file" class="form-control custom-file-input @error('file') is-invalid @enderror" id="input file" name="file" required>
                   </div>
                   </div>
+                  @if (auth()->user()->abstrak->is_locked==false)
                   <div class="mb-3 submit-btn">
                     <button class="btn btn-primary" type="submit">Submit</button>
                   </div>
+                  @endif
                 </form>
               </div>
             </div>

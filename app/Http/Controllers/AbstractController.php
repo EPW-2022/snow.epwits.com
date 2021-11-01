@@ -28,7 +28,7 @@ class AbstractController extends Controller
 		]);
 
         //if ketika locked false, masih 
-        return redirect ('/dashboard');
+        return redirect ('/dashboard')->with('abstrak', 'Datamu berhasil berhasil tersimpan!');
     }
 
     

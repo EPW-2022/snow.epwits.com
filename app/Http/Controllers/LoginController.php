@@ -13,6 +13,13 @@ class LoginController extends Controller
         return view('login.index');
     }
 
+    public function cek(){
+        if (Auth::check()) {
+            Auth::logout();
+        }
+        return view('login.index');
+    }
+
     public function authenticate(Request $request){
         $credentials=$request->validate([
             "username"=>'required|min:6',
@@ -43,7 +50,7 @@ class LoginController extends Controller
             
         }
 
-        return back()->with('loginerror', 'loginfailed');
+        return back()->with('loginerror', 'Login gagal');
     }
 
     public function logout(Request $request)
