@@ -25,8 +25,8 @@
               <form action="/login" method="POST" class="login-form mx-auto me-2 px-4 mt-5 mt-md-0">
                 @csrf
                 <div class="mb-4 ">
-                  <label for="username" class="form-label">Alamat email</label>
-                  <input class="form-control @error('username') is-invalid @enderror" type="text" id="username" name="username" placeholder="Alamat email" autofocus tabindex="1" autocomplete="on" required>
+                  <label for="username" class="form-label">Username</label>
+                  <input class="form-control @error('username') is-invalid @enderror" type="text" id="username" name="username" placeholder="Username" autofocus tabindex="1" autocomplete="on" required>
                 </div>
                 <div class="mb-4">
                   <label for="password" class="form-label">Password</label>
