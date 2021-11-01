@@ -21,7 +21,7 @@
                 @endif
             @endif   </p>
         </div>
-        <a class="d-grid btn btn-primary gap-3 col-3 mx-auto kartu" href="https://nekocalc.com/px-to-rem-converter" target="blank"  role="button">Lihat Kartu Peserta</a> 
+         
         
         <div class="container abstrak-sub mx-auto">
             <div class="row">
