@@ -344,11 +344,11 @@ nav.navbar .navbar-nav .dropdown .dropdown-menu a.dropdown-item {
   font-family: "Zilla Slab", serif;
   color: #f2f2f2;
   letter-spacing: 1px;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .loginm .container .login-form .login-register a {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
