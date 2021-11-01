@@ -34,7 +34,7 @@
                   <input class="form-control @error('password') is-invalid @enderror" type="password" id="password" name="password" placeholder="Password" tabindex="2" required>
                 </div>
                 <button type="submit" class="btn login-button w-100" tabindex="3">Log In</button>
-                <p class="login-register text-center mt-3 mx-auto" tabindex="4">Belum punya akun? <a href="/register">Daftar sekarang!</a></p>
+                <p class="login-register text-center mt-3 mx-auto" tabindex="4">Belum punya akun? <br><a href="/register">Daftar sekarang!</a></p>
               </form>
             </div>
           </div>

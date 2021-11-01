@@ -346,6 +346,7 @@ nav.navbar .navbar-nav .dropdown .dropdown-menu a.dropdown-item {
 .loginm .container .login-form .login-register a {
   font-size: 1rem;
   font-weight: bold;
+  padding-left: 0px !important;
 }
 
 @media screen and (max-width: 768px) {
