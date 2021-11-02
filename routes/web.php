@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
@@ -18,7 +20,9 @@ use App\Http\Controllers\AbstractController;
 |
 */
 
-Route::get('/', [LoginController::class, 'cek']);
+Route::get('/', function(){
+    return redirect('/dashboard');
+});
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -34,5 +38,13 @@ Route::post('/submitabs', [AbstractController::class, 'store']);
 Route::get('/verifakun', function(){
     return view('login.verif');
 })->middleware('auth') ; 
+
+Route::get('/home', function (Request $request) {
+    if (Auth::check()) {
+        Auth::logout();
+            $request->session()->invalidate();
+    }
+    return view('login.index');
+});
 
 Route::post('/kunciabs', [AbstractController::class, 'lock']);
