@@ -41,7 +41,7 @@ class LoginController extends Controller
         if(Auth::attempt($credentials)){
             if ($syarat2=="1"  ) {
                 $request->session()->regenerate();
-                return redirect()->intended('/dashboard');
+                return redirect()->intended('/');
             } else {
                 $request->session()->regenerate();
                 return redirect()->intended('/verifakun');

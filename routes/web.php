@@ -20,9 +20,7 @@ use App\Http\Controllers\AbstractController;
 |
 */
 
-Route::get('/', function(){
-    return redirect('/dashboard');
-});
+Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -31,7 +29,6 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::post('/submitabs', [AbstractController::class, 'store']);
 
@@ -39,12 +36,13 @@ Route::get('/verifakun', function(){
     return view('login.verif');
 })->middleware('auth') ; 
 
-Route::get('/home', function (Request $request) {
-    if (Auth::check()) {
-        Auth::logout();
-            $request->session()->invalidate();
-    }
-    return view('login.index');
-});
+// Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+// Route::get('/home', function (Request $request) {
+//     if (Auth::check()) {
+//         Auth::logout();
+//             $request->session()->invalidate();
+//     }
+//     return view('login.index');
+// });
 
-Route::post('/kunciabs', [AbstractController::class, 'lock']);
+// Route::post('/kunciabs', [AbstractController::class, 'lock']);

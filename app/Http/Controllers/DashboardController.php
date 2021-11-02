@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     public function index(){
-        if (Auth::check()) {
-            return view('dashboard.index');
-        }
-        return view('login.index');
+        
+        return view('dashboard.index');
     }
 }
