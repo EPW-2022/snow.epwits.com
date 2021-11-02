@@ -13,9 +13,12 @@ class LoginController extends Controller
         return view('login.index');
     }
 
-    public function cek(){
+    public function cek(Request $request){
         if (Auth::check()) {
             Auth::logout();
+            $request->session()->invalidate();
+
+    $request->session()->regenerateToken();
         }
         return view('login.index');
     }
@@ -37,11 +40,8 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials)){
             if ($syarat2=="1"  ) {
-                return view('dashboard.index', [
-                    "namatim"=>$namateam,
-                    "asal"=>$asalsekolah,
-                    "number"=>$syarat
-                ]);
+                $request->session()->regenerate();
+                return redirect()->intended('/dashboard');
             } else {
                 $request->session()->regenerate();
                 return redirect()->intended('/verifakun');

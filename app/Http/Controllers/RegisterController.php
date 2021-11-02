@@ -19,7 +19,7 @@ class RegisterController extends Controller
     }
 
     public function store(Request $request){
-        //tabel user
+        //validasi tabel user
         $validatedData=$request->validate([
             "namatim"=>'required',
             "username"=>'required|min:6',
@@ -27,11 +27,7 @@ class RegisterController extends Controller
             "password"=>'min:6|required_with:conpassword|same:conpassword',
             "conpassword"=>'min:6'
         ]);
-        $validatedData['password']=bcrypt($validatedData['password']);
-        $user= User::create($validatedData);
-        
-        
-        //tabel leader
+        //validasi tabel leader
         $validatedDataDua=$request->validate([
             "asalsekolah"=>'required',
             "kota"=>'required',
@@ -45,6 +41,34 @@ class RegisterController extends Controller
             "kartupel"=>'required|mimes:jpeg,png,jpg|max:2048',
             "twibbon"=>'required|mimes:jpeg,png,jpg|max:2048'
         ]);
+        
+        //validasi tabel member
+        $validatedDataTiga=$request->validate([
+            "namaanggota1"=>'required',
+            "nisn1"=>'required',
+            "tempatlahir1"=>'required',
+            "tanggallahir1"=>'required',
+            "foto1"=>'mimes:jpeg,png,jpg|max:2048',
+            "kartupel1"=>'required|mimes:jpeg,png,jpg|max:2048',
+            "twibbon1"=>'required|mimes:jpeg,png,jpg|max:2048'
+        ]);
+        
+        //validasi tabel member2
+        $validatedDataEmpat=$request->validate([
+            "namaanggota2"=>'',
+            "nisn2"=>'',
+            "tempatlahir2"=>'',
+            "tanggallahir2"=>'',
+            "foto2"=>'mimes:jpeg,png,jpg|max:2048',
+            "kartupel2"=>'mimes:jpeg,png,jpg|max:2048',
+            "twibbon2"=>'mimes:jpeg,png,jpg|max:2048'
+        ]);
+
+        
+        $validatedData['password']=bcrypt($validatedData['password']);
+        $user= User::create($validatedData);
+        
+        
 
         $foto = $request->file('foto');
         $nama_file = $foto->getClientOriginalName();
@@ -69,16 +93,6 @@ class RegisterController extends Controller
         Leader::create($validatedDataDua);
         
 
-        //tabel member
-        $validatedDataTiga=$request->validate([
-            "namaanggota1"=>'required',
-            "nisn1"=>'required',
-            "tempatlahir1"=>'required',
-            "tanggallahir1"=>'required',
-            "foto1"=>'mimes:jpeg,png,jpg|max:2048',
-            "kartupel1"=>'required|mimes:jpeg,png,jpg|max:2048',
-            "twibbon1"=>'required|mimes:jpeg,png,jpg|max:2048'
-        ]);
         $foto1 = $request->file('foto1');
         $nama_file3 = $foto1->getClientOriginalName();
         $tujuan_upload3 = 'foto_anggota1';
@@ -102,15 +116,6 @@ class RegisterController extends Controller
 
         ModelsMember::create($validatedDataTiga);
         
-        $validatedDataEmpat=$request->validate([
-            "namaanggota2"=>'',
-            "nisn2"=>'',
-            "tempatlahir2"=>'',
-            "tanggallahir2"=>'',
-            "foto2"=>'mimes:jpeg,png,jpg|max:2048',
-            "kartupel2"=>'mimes:jpeg,png,jpg|max:2048',
-            "twibbon2"=>'mimes:jpeg,png,jpg|max:2048'
-        ]);
 
         Abstrak::create([
             'user_id'=>$user->id,
