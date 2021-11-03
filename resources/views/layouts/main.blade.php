@@ -39,7 +39,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             @auth
             <li class="nav-item text-center">
-              <a class="nav-link my-3" href="/dashboard">Dashboard</a>
+              <a class="nav-link my-3" href="/">Dashboard</a>
             </li>
               <li class="nav-item text-center">
                 <form action="/logout" method="POST">
@@ -49,7 +49,7 @@
               </li>
             @else
                 <li class="nav-item text-center">
-                  <a class="nav-link my-3" href="/dashboard">Dashboard</a>
+                  <a class="nav-link my-3" href="/">Dashboard</a>
                 </li>
                 <li class="nav-item text-center">
                   <a class="nav-link my-3" href="/register">Sign up</a>

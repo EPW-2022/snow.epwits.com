@@ -51,6 +51,11 @@
                   <div class="bb">
                     <div class="form">
                   <input type="file" class="form-control custom-file-input @error('file') is-invalid @enderror" id="input file" name="file" required>
+                  @error('file')
+                  <div class="invalid-feedback ps-1 pt-1">
+                    {{ $message }}
+                  </div>
+                  @enderror
                   </div>
                   </div>
                   @if (auth()->user()->abstrak->is_locked==false)
