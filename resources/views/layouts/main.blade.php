@@ -38,15 +38,24 @@
         <div class="collapse navbar-collapse flex-md-grow-0" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             @auth
-            <li class="nav-item text-center">
-              <a class="nav-link my-3" href="/">Dashboard</a>
-            </li>
-              <li class="nav-item text-center">
-                <form action="/logout" method="POST">
-                  @csrf
-                  <button type="submit" class="nav-link border-0 bg-transparent my-3">Logout</button>
-                </form>
-              </li>
+                @if (auth()->user()->leader->is_verified==true)
+                <li class="nav-item text-center">
+                  <a class="nav-link my-3" href="/">Dashboard</a>
+                </li>
+                  <li class="nav-item text-center">
+                    <form action="/logout" method="POST">
+                      @csrf
+                      <button type="submit" class="nav-link border-0 bg-transparent my-3">Logout</button>
+                    </form>
+                  </li>
+                @else
+                <li class="nav-item text-center">
+                  <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" class="nav-link border-0 bg-transparent my-3">Logout</button>
+                  </form>
+                </li>
+                @endif
             @else
                 <li class="nav-item text-center">
                   <a class="nav-link my-3" href="/">Dashboard</a>

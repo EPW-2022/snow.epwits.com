@@ -41,9 +41,9 @@ class LoginController extends Controller
         if(Auth::attempt($credentials)){
             
             if ($syarat2=="1"  ) {
-                return view('dashboard.index');   
+                return redirect('/');   
             } else {
-                return view('login.verif');
+                return redirect('/verifakun');
             }   
         }     
         return back()->with('loginerror', 'Login gagal');
@@ -57,6 +57,6 @@ class LoginController extends Controller
 
     $request->session()->regenerateToken();
 
-    return redirect('/');
+    return redirect('/login');
 }
 }
