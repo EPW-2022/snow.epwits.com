@@ -16,7 +16,7 @@ class Registered
    */
   public function handle($request, Closure $next)
   {
-    if (auth()->user()->is_verified == false) {
+    if (auth()->user()->leader->is_verified == false) {
       return redirect('/verifakun');
     } else {
       return $next($request);
