@@ -29,22 +29,18 @@ class LoginController extends Controller
             "password"=>'required'
         ]);
         
-        $user=User::where('username', $request->username)->first();
-        $syarat=$user->id;
-        $leader=Leader::where('user_id', $syarat)->first();
-        $syarat2=$leader->is_verified;
         
-        $namateam=$user->namatim;
-        $asalsekolah=$leader->asalsekolah;
 
 
         if(Auth::attempt($credentials)){
-            
-            if ($syarat2=="1"  ) {
-                return redirect('/');   
+            if (auth()->user()->roles == 'Admin' || auth()->user()->roles == 'Superadmin') {
+                return redirect('/admin');
             } else {
-                return redirect('/verifakun');
-            }   
+                if (auth()->user()->leader->is_verified == false  ) {
+                    return redirect('/verifakun');   
+                } else {
+                    return redirect('/');
+            }  } 
         }     
         return back()->with('loginerror', 'Login gagal');
     }

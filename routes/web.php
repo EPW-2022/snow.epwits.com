@@ -1,12 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AbstractController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AbstractController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminTeamController;
 
 
 /*
@@ -36,13 +38,21 @@ Route::get('/verifakun', function(){
     return view('login.verif');
 })->middleware('auth') ; 
 
-// Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-// Route::get('/home', function (Request $request) {
-//     if (Auth::check()) {
-//         Auth::logout();
-//             $request->session()->invalidate();
-//     }
-//     return view('login.index');
-// });
 
-// Route::post('/kunciabs', [AbstractController::class, 'lock']);
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
+
+    Route::get('/', [AdminController::class, 'index']);
+  
+    Route::prefix('tim')->group(function () {
+      Route::get('/', [AdminTeamController::class, 'index']);
+      Route::get('/verifikasi', [AdminTeamController::class, 'verifying']);
+      Route::get('/ketua', [AdminTeamController::class, 'leader']);
+      Route::get('/anggota', [AdminTeamController::class, 'member']);
+      Route::get('/{team:id}', [AdminTeamController::class, 'show']);
+  
+      Route::post('/verifikasi/{user:id}', [AdminTeamController::class, 'verified']);
+      Route::post('/resetpass/{user:id}', [AdminTeamController::class, 'resetpass']);
+      Route::post('/deleteData/{user:id}', [AdminTeamController::class, 'deletingData']);
+    });
+  });
+
