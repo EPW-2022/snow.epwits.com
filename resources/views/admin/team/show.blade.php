@@ -357,7 +357,7 @@
                 </div>
                 <div class="text-center mt-4">
                   <h4 class="mb-1">{{ $team->user->member2->namaanggota2 }}</h4>
-                  <p class="mb-0 text-secondary">Anggota 2<span class="fw-bolder">{{ $team->user->namatim }}</span></p>
+                  <p class="mb-0 text-secondary">Anggota 2 <span class="fw-bolder">{{ $team->user->namatim }}</span></p>
                   <p class="mb-0 text-secondary">{{ $team->asalsekolah }}</p>
                   <div class="mt-4"></div>
                   <a href="/kartupel_anggota2/{{ $team->user->member2->kartupel2 }}" target="_blank" class="mb-0 text-secondary d-block">Lihat Kartu Pelajar</a>

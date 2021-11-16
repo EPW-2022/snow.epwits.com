@@ -92,7 +92,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty2",
                 "kartupel"=>"beauty2",
-                "twibbon"=>"beauty2"
+                "twibbon"=>"beauty2",
+                "is_verified"=>true
             ]);
             Leader::create([
                 "user_id"=>2,
@@ -106,7 +107,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty3",
                 "kartupel"=>"beauty3",
-                "twibbon"=>"beauty3"
+                "twibbon"=>"beauty3",
+                "is_verified"=>true
             ]);
             Leader::create([
                 "user_id"=>3,
@@ -120,7 +122,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty4",
                 "kartupel"=>"beauty4",
-                "twibbon"=>"beauty4"
+                "twibbon"=>"beauty4",
+                "is_verified"=>true
             ]);
             Leader::create([
                 "user_id"=>4,
@@ -134,7 +137,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty5",
                 "kartupel"=>"beauty5",
-                "twibbon"=>"beauty5"
+                "twibbon"=>"beauty5",
+                "is_verified"=>true
             ]);
             Leader::create([
                 "user_id"=>5,
@@ -148,7 +152,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty6",
                 "kartupel"=>"beauty6",
-                "twibbon"=>"beauty6"
+                "twibbon"=>"beauty6",
+                "is_verified"=>true
             ]);
             Leader::create([
                 "user_id"=>6,
@@ -162,7 +167,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty7",
                 "kartupel"=>"beauty7",
-                "twibbon"=>"beauty7"
+                "twibbon"=>"beauty7",
+                "is_verified"=>false
             ]);
             Leader::create([
                 "user_id"=>7,
@@ -176,7 +182,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty8",
                 "kartupel"=>"beauty8",
-                "twibbon"=>"beauty8"
+                "twibbon"=>"beauty8",
+                "is_verified"=>false
             ]);
             Leader::create([
                 "user_id"=>8,
@@ -190,7 +197,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty9",
                 "kartupel"=>"beauty9",
-                "twibbon"=>"beauty9"
+                "twibbon"=>"beauty9",
+                "is_verified"=>false
             ]);
             Leader::create([
                 "user_id"=>9,
@@ -204,7 +212,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty10",
                 "kartupel"=>"beauty10",
-                "twibbon"=>"beauty10"
+                "twibbon"=>"beauty10",
+                "is_verified"=>false
             ]);
             Leader::create([
                 "user_id"=>10,
@@ -218,7 +227,8 @@ class DatabaseSeeder extends Seeder
                 "tanggallahir"=>"2021-10-10",
                 "foto"=>"beauty11",
                 "kartupel"=>"beauty11",
-                "twibbon"=>"beauty11"
+                "twibbon"=>"beauty11",
+                "is_verified"=>false
             ]);
 
             Member::create([
