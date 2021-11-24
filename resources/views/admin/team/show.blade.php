@@ -295,6 +295,24 @@
               </div>
             </div>
           @endif
+          <div class="card border mt-4">
+            <div class="card-header">
+              <h6 class="mb-0">File Tim</h6>
+            </div>
+            <div class="card-body">
+              <div class="row mb-2">
+                <div class="col-md-4 col-sm-5 d-flex justify-content-between">
+                  <span> Abstrak </span>
+                  <span class="d-none d-sm-block">:</span>
+                </div>
+                <div class="col-md-8 col-sm-7 fw-bold">
+                  @if ($team->user->abstrak->filename)
+                  <a href="/abstrak/{{ $team->user->abstrak->filename }}" target="_blank" class="mb-0 text-secondary d-block">Lihat disini</a>    
+                  @endif
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="text-end mt-4">
             <form action="/admin/tim/deleteData/{{ $team->user->id }}" method="POST" class="d-inline">
