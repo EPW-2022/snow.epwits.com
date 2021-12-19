@@ -58,11 +58,7 @@
                   @enderror
                   </div>
                   </div>
-                  @if (auth()->user()->abstrak->is_locked==false)
-                  <div class="mb-3 submit-btn">
-                    <button class="btn btn-primary" type="submit">Submit</button>
-                  </div>
-                  @endif
+                  
                 </form>
               </div>
             </div>
