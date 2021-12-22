@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KTIController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AbstractController;
 use App\Http\Controllers\RegisterController;
@@ -36,8 +37,11 @@ Route::post('/submitabs', [AbstractController::class, 'store']);
 
 Route::get('/verifakun', function(){
     return view('login.verif');
-})->middleware('auth') ; 
+})->middleware('auth'); 
 
+Route::get('/kti', [KTIController::class, 'index'])->middleware('auth', 'registered');
+Route::post('/submitbayar', [KTIController::class, 'store'])->middleware('auth', 'registered');
+Route::post('/submitkti', [KTIController::class, 'storekti'])->middleware('auth', 'registered');
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
@@ -51,6 +55,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
       Route::get('/{team:id}', [AdminTeamController::class, 'show']);
   
       Route::post('/verifikasi/{user:id}', [AdminTeamController::class, 'verified']);
+      Route::post('/verifbayar/{user:id}', [AdminTeamController::class, 'verifiedbayar']);
       Route::post('/resetpass/{user:id}', [AdminTeamController::class, 'resetpass']);
       Route::post('/deleteData/{user:id}', [AdminTeamController::class, 'deletingData']);
     });

@@ -23,61 +23,61 @@ class DatabaseSeeder extends Seeder
             "namatim" => "Halilintar",
             "username" => "gilangakbar",
             "email" => "atta@gmail.com",
-            "password" => "gilangakbar"
+            "password" => bcrypt("gilangakbar")
         ]);
         User::create([
             "namatim" => "nagafisika",
             "username" => "fisikadragon",
             "email" => "fisikadragon@gmail.com",
-            "password" => "fisikadragon1234"
+            "password" => bcrypt("fisikadragon1234")
         ]);
         User::create([
             "namatim" => "halophysics",
             "username" => "halophysics",
             "email" => "halophysics@gmail.com",
-            "password" => "halophysics1234"
+            "password" => bcrypt("halophysics1234")
         ]);
         User::create([
             "namatim" => "bismillahteknikfisika",
             "username" => "bismillahteknikfisika",
             "email" => "bismillahteknikfisika@gmail.com",
-            "password" => "bismillahteknikfisika1234"
+            "password" => bcrypt("bismillahteknikfisika1234")
         ]);
         User::create([
             "namatim" => "dramaqueen",
             "username" => "dramaqueen",
             "email" => "dramaqueen@gmail.com",
-            "password" => "dramaqueen1234"
+            "password" => bcrypt("dramaqueen1234")
         ]);
         User::create([
             "namatim" => "farhanally",
             "username" => "farhanally",
             "email" => "farhanally@gmail.com",
-            "password" => "farhanally1234"
+            "password" => bcrypt("farhanally1234")
         ]);
         User::create([
             "namatim" => "bambangfisikawan",
             "username" => "bambangfisikawan",
             "email" => "bambangfisikawan@gmail.com",
-            "password" => "bambangfisikawan1234"
+            "password" => bcrypt("bambangfisikawan1234")
         ]);
         User::create([
             "namatim" => "fastlearnphysics",
             "username" => "fastlearnphysics",
             "email" => "fastlearnphysics@gmail.com",
-            "password" => "fastlearnphysics1234"
+            "password" => bcrypt("fastlearnphysics1234")
         ]);
         User::create([
             "namatim" => "fisikavskimia",
             "username" => "fisikavskimia",
             "email" => "fisikavskimia@gmail.com",
-            "password" => "fisikavskimia1234"
+            "password" => bcrypt("fisikavskimia1234")
         ]);
         User::create([
             "namatim" => "pecintafisika2",
             "username" => "pecintafisika2",
             "email" => "pecintafisika2@gmail.com",
-            "password" => "pecintafisika21234"
+            "password" => bcrypt("pecintafisika21234")
         ]);
 
         Leader::create([
@@ -433,46 +433,46 @@ class DatabaseSeeder extends Seeder
             "twibbon2" => "keanggota10"
         ]);
 
-        Abstrak::create([
-            "user_id" => 1,
-            "filename" => "Judul ke 1"
-        ]);
-        Abstrak::create([
-            "user_id" => 2,
-            "filename" => "Judul ke 2"
-        ]);
-        Abstrak::create([
-            "user_id" => 3,
-            "filename" => "Judul ke 3"
-        ]);
-        Abstrak::create([
-            "user_id" => 4,
-            "filename" => "Judul ke 4"
-        ]);
-        Abstrak::create([
-            "user_id" => 5,
-            "filename" => "Judul ke 5"
-        ]);
-        Abstrak::create([
-            "user_id" => 6,
-            "filename" => "Judul ke 6"
-        ]);
-        Abstrak::create([
-            "user_id" => 7,
-            "filename" => "Judul ke 7"
-        ]);
-        Abstrak::create([
-            "user_id" => 8,
-            "filename" => "Judul ke 8"
-        ]);
-        Abstrak::create([
-            "user_id" => 9,
-            "filename" => "Judul ke 9"
-        ]);
-        Abstrak::create([
-            "user_id" => 10,
-            "filename" => "Judul ke 10"
-        ]);
+        // Abstrak::create([
+        //     "user_id" => 1,
+        //     "filename" => "Judul ke 1"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 2,
+        //     "filename" => "Judul ke 2"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 3,
+        //     "filename" => "Judul ke 3"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 4,
+        //     "filename" => "Judul ke 4"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 5,
+        //     "filename" => "Judul ke 5"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 6,
+        //     "filename" => "Judul ke 6"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 7,
+        //     "filename" => "Judul ke 7"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 8,
+        //     "filename" => "Judul ke 8"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 9,
+        //     "filename" => "Judul ke 9"
+        // ]);
+        // Abstrak::create([
+        //     "user_id" => 10,
+        //     "filename" => "Judul ke 10"
+        // ]);
 
 
         Leader::create([

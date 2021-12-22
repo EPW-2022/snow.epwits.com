@@ -311,7 +311,37 @@
                   @endif
                 </div>
               </div>
+              <div class="row mb-2">
+                <div class="col-md-4 col-sm-5 d-flex justify-content-between">
+                  <span> Bukti Bayar </span>
+                  <span class="d-none d-sm-block">:</span>
+                </div>
+                <div class="col-md-8 col-sm-7 fw-bold">
+                  @if ($team->user->step >=3)
+                      Sudah diverifikasi
+                  @endif
+                  @if ($team->user->step ==2)
+                  <a href="/buktibayar/{{ $team->user->abstrak->filename1 }}" target="_blank" class="mb-0 text-secondary d-block">Lihat disini</a>
+                  <form action="/admin/tim/verifbayar/{{ $team->user->id }}" method="POST" class="d-inline">
+                    @csrf   
+                  <button style="font-size:12px" type="submit" class="btn btn-success">Verifikasi Pembayaran</button>
+                  </form>
+                  @endif
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-md-4 col-sm-5 d-flex justify-content-between">
+                  <span> Full KTI </span>
+                  <span class="d-none d-sm-block">:</span>
+                </div>
+                <div class="col-md-8 col-sm-7 fw-bold">
+                  @if ($team->user->abstrak->filename2)
+                  <a href="/fullKTI/{{ $team->user->abstrak->filename2 }}" target="_blank" class="mb-0 text-secondary d-block">Lihat disini</a>    
+                  @endif
+                </div>
+              </div>
             </div>
+            
           </div>
 
           <div class="text-end mt-4">

@@ -528,6 +528,7 @@ class ComposerStaticInit2d570b0cfe415950bc8667c092f1aa7f
         'App\\Http\\Controllers\\Admin\\AdminTeamController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminTeamController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
+        'App\\Http\\Controllers\\KTIController' => __DIR__ . '/../..' . '/app/Http/Controllers/KTIController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
         'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

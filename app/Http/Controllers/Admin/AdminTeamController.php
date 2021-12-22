@@ -64,6 +64,17 @@ class AdminTeamController extends Controller
         return redirect('admin/tim')->with('message', 'Verified');
     }
 
+    public function verifiedbayar(User $user)
+    {
+        $ygdiverif=$user->id;
+        User::where('id', $ygdiverif)->update([
+            'step' => 3
+        ]);
+        
+        
+        return redirect('admin/tim')->with('message', 'Verified');
+    }
+
     public function resetpass(User $user)
     {
         $data['password'] = Hash::make($user->username);
