@@ -39,7 +39,7 @@ class LoginController extends Controller
                 if (auth()->user()->leader->is_verified == false  ) {
                     return redirect('/verifakun');   
                 } else {
-                    return redirect('/kti');
+                    return view('kti.ktiterkumpul');
             }  } 
         }     
         return back()->with('loginerror', 'Login gagal');
