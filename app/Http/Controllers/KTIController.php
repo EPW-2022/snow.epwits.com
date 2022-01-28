@@ -11,14 +11,12 @@ class KTIController extends Controller
 {
     public function index()
     {
-        if(auth()->user()->step == 1){
-            return view('kti.bayar');
-        } elseif(auth()->user()->step == 2){
-            return view('kti.verifbayar');
-        } elseif(auth()->user()->step==3){
-            return view('kti.kti');
-        } elseif(auth()->user()->step==4){
-            return view('kti.ktiterkumpul');
+        if(auth()->user()->step <= 4){
+            return view('kti.tidaklolos');
+        } elseif(auth()->user()->step==5){
+            return view('kti.loloskti');
+        } elseif(auth()->user()->step==6){
+            return view('kti.finalterkumpul');
         }
     } 
 
@@ -70,6 +68,43 @@ class KTIController extends Controller
 		]);
 
         return redirect ('/kti');
+    }
+
+    public function storefinal(Request $request){
+        $validatedData=$request->validate([
+            "poster"=> 'required|mimes:pdf'
+        ]);
+        $validatedDataDua=$request->validate([
+            "presentasi"=> 'required|mimes:pdf'
+        ]);
+        $validatedDataTiga=$request->validate([
+            "filename5"=> 'required'
+        ]);
+
+        $file1=$request->file('poster');
+        $nama_file1 = $file1->getClientOriginalName();
+        $tujuan_upload1 = 'poster';
+        $file1 -> move($tujuan_upload1, $file1->getClientOriginalName());
+
+        $file2=$request->file('presentasi');
+        $nama_file2 = $file2->getClientOriginalName();
+        $tujuan_upload2 = 'presentasi';
+        $file2 -> move($tujuan_upload2, $file2->getClientOriginalName());
+
+
+        Abstrak::where('user_id', auth()->user()->id)->update([
+            'filename3' => $nama_file1,
+            'filename4' => $nama_file2,
+            'filename5' => $validatedDataTiga["filename5"]
+        ]);
+
+        User::where('id', auth()->user()->id)->update([
+			'step' => 6
+		]);
+
+        return view('kti.finalterkumpul');
+
+        
     }
 
 }

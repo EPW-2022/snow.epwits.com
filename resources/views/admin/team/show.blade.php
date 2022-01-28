@@ -340,7 +340,62 @@
                   @endif
                 </div>
               </div>
+              <div class="row mb-2">
+                <div class="col-md-4 col-sm-5 d-flex justify-content-between">
+                  <span> Final </span>
+                  <span class="d-none d-sm-block">:</span>
+                </div>
+                <div class="col-md-8 col-sm-7 fw-bold">
+                  @if ($team->user->step <=4)
+                   <form action="/admin/tim/lolosfinal/{{ $team->user->id }}" method="POST" class="d-inline">
+                    @csrf   
+                  <button style="font-size:12px" type="submit" class="btn btn-success">Loloskan</button>
+                  </form>
+                  @endif
+                  @if ($team->user->step > 4)
+                  Lolos Final
+                  @endif
+                </div>
+              </div>
+              
+              @if ($team->user->step == 6)
+              <div class="row mb-2">
+                <div class="col-md-4 col-sm-5 d-flex justify-content-between">
+                  <span> Poster </span>
+                  <span class="d-none d-sm-block">:</span>
+                </div>
+                <div class="col-md-8 col-sm-7 fw-bold">
+                  @if ($team->user->abstrak->filename3)
+                  <a href="/poster/{{ $team->user->abstrak->filename3 }}" target="_blank" class="mb-0 text-secondary d-block">Lihat disini</a>    
+                  @endif
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-md-4 col-sm-5 d-flex justify-content-between">
+                  <span> Presentasi </span>
+                  <span class="d-none d-sm-block">:</span>
+                </div>
+                <div class="col-md-8 col-sm-7 fw-bold">
+                  @if ($team->user->abstrak->filename4)
+                  <a href="/presentasi/{{ $team->user->abstrak->filename4 }}" target="_blank" class="mb-0 text-secondary d-block">Lihat disini</a>    
+                  @endif
+                </div>
+                <div class="row mb-2 mt-2">
+                  <div class="col-md-4 col-sm-5 d-flex justify-content-between">
+                    <span> Link video </span>
+                    <span class="d-none d-sm-block">:</span>
+                  </div>
+                  <div class="col-md-8 col-sm-7 fw-bold">
+                    @if ($team->user->abstrak->filename5)
+                    <a href="{{ $team->user->abstrak->filename5 }}" target="_blank" class="mb-0 text-secondary d-block">Disini</a>    
+                    @endif
+                  </div>
+                </div>
+              </div>
+              @endif
+
             </div>
+            
             
           </div>
 

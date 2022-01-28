@@ -42,6 +42,7 @@ Route::get('/verifakun', function(){
 Route::get('/kti', [KTIController::class, 'index'])->middleware('auth', 'registered');
 Route::post('/submitbayar', [KTIController::class, 'store'])->middleware('auth', 'registered');
 Route::post('/submitkti', [KTIController::class, 'storekti'])->middleware('auth', 'registered');
+Route::post('/submitfinal', [KTIController::class, 'storefinal'])->middleware('auth', 'registered');
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
@@ -56,6 +57,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
   
       Route::post('/verifikasi/{user:id}', [AdminTeamController::class, 'verified']);
       Route::post('/verifbayar/{user:id}', [AdminTeamController::class, 'verifiedbayar']);
+      Route::post('/lolosfinal/{user:id}', [AdminTeamController::class, 'passFinal']);
       Route::post('/resetpass/{user:id}', [AdminTeamController::class, 'resetpass']);
       Route::post('/deleteData/{user:id}', [AdminTeamController::class, 'deletingData']);
     });
