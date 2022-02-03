@@ -93,7 +93,7 @@
               </div>
               
             </div>
-            <p style="margin-left:170px">  * Catatan : Link GuideBook Final SNOW 2022 dapat diakses <a style="all: unset" href="https://drive.google.com/drive/folders/1luC5IPxmMx7T269BrmdMnsTYvHd8Noh5?usp=sharing"> disini</a> </p>
+            <p style="margin-left:170px">  * Catatan : Link GuideBook Final SNOW 2022 dapat diakses <a style="all: unset" href="https://drive.google.com/drive/folders/1luC5IPxmMx7T269BrmdMnsTYvHd8Noh5?usp=sharing"> <strong> disini </strong> </a> </p>
             
                     
                 
