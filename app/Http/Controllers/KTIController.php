@@ -72,7 +72,7 @@ class KTIController extends Controller
 
     public function storefinal(Request $request){
         $validatedData=$request->validate([
-            "poster"=> 'required|mimes:pdf'
+            "poster"=> 'required|mimes:pdf,jpg,jpeg'
         ]);
         $validatedDataDua=$request->validate([
             "presentasi"=> 'required|mimes:pdf'
