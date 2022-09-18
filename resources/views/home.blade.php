@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>Halaman Depan</h1>
+    <h1>Dashboard</h1>
 @endsection

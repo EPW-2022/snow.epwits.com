@@ -12,9 +12,9 @@
     {{-- CSS --}}
     <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/img/epw-logo/logo-bg-blue.png" type="image/x-icon">
 
-    <title>EPW 2022</title>
+
+    <title>Invent</title>
   </head>
   <body>
     {{-- Navbar --}}
@@ -22,7 +22,7 @@
       <div class="container">
         <div class="navbar-brand flex-md-grow-1">
           <a href="#">
-            <img src="/img/epw-logo/logo-white.png" alt="EPW Logo" width="60">
+            <img src="/img/smkmalang.png" alt="smk" width="60">
           </a>
         </div>
         <div class="navbar-rainbow">
@@ -40,9 +40,12 @@
               <a class="nav-link my-3" href="/">Dashboard</a>
             </li>
             <li class="nav-item text-center">
-              <a class="nav-link my-3" href="/register">sign up</a>
+              <a class="nav-link my-3" href="/inputform">Input Barang</a>
             </li>
-            @auth
+            <li class="nav-item text-center">
+              <a class="nav-link my-3" href="/loan">Input Peminjaman</a>
+            </li>
+            {{-- @auth
               <li class="nav-item text-center">
                 <form action="/logout" method="POST">
                   @csrf
@@ -59,7 +62,7 @@
                   <a class="nav-link my-3" href="/login">Login</a>
                 </li>
               @endif
-            @endauth
+            @endauth --}}
           </ul>
         </div>
       </div>
